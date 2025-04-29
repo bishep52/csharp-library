@@ -1,0 +1,49 @@
+﻿@model IEnumerable<DB_connect.Models.Reader>
+
+@{
+    ViewData["Title"] = "Список читателей";
+}
+
+<div class="container py-5">
+    <h2 class="mb-4 text-center">👤 Список читателей</h2>
+
+    <div class="d-flex justify-content-end mb-3">
+        <a class="btn btn-success" asp-action="Create">➕ Добавить нового читателя</a>
+    </div>
+
+    @if (Model != null && Model.Any())
+    {
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered align-middle">
+                <thead class="table-dark text-center">
+                    <tr>
+                        <th>Имя</th>
+                        <th>Фамилия</th>
+                        <th>Действия</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var reader in Model)
+                    {
+                        <tr>
+                            <td>@reader.Name</td>
+                            <td>@reader.SecondName</td>
+                            <td class="text-center">
+                                <div class="btn-group" role="group">
+                                    <a class="btn btn-sm btn-primary" asp-action="Edit" asp-route-id="@reader.Id">✏️ Редактировать</a>
+                                    <a class="btn btn-sm btn-danger" asp-action="Delete" asp-route-id="@reader.Id">🗑️ Удалить</a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info text-center" role="alert">
+            Читатели не найдены 👤
+        </div>
+    }
+</div>

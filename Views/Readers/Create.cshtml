@@ -1,0 +1,34 @@
+﻿@model DB_connect.Models.Reader
+
+@{
+    ViewData["Title"] = "Добавить нового читателя";
+}
+
+<div class="container py-5">
+    <h2 class="mb-4 text-center">➕ Добавить нового читателя</h2>
+
+    <form asp-action="Create" method="post" class="mx-auto" style="max-width: 600px;">
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label">Имя</label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="SecondName" class="form-label">Фамилия</label>
+            <input asp-for="SecondName" class="form-control" />
+            <span asp-validation-for="SecondName" class="text-danger"></span>
+        </div>
+
+        <div class="d-flex justify-content-between">
+            <a asp-action="Index" class="btn btn-secondary">🔙 Назад</a>
+            <button type="submit" class="btn btn-success">💾 Сохранить</button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Главная страница";
+}
+
+<div class="container py-5 text-center">
+    <h1 class="display-4 mb-4">Добро пожаловать в библиотеку! 📖</h1>
+
+    <p class="lead mb-5">
+        Управляйте книгами, бронируйте и читайте с удовольствием.
+    </p>
+
+    <a class="btn btn-primary btn-lg" asp-controller="Books" asp-action="Index">Перейти к списку книг 📚</a>
+    <a class="btn btn-primary btn-lg" asp-controller="Readers" asp-action="Index">Перейти к списку читателей 👤</a>
+</div>

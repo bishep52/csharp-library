@@ -1,0 +1,27 @@
+﻿@model DB_connect.Models.Reader
+
+@{
+    ViewData["Title"] = "Удаление читателя";
+}
+
+<div class="container py-5">
+    <h2 class="mb-4 text-center text-danger">🗑️ Удалить читателя</h2>
+
+    <div class="alert alert-warning text-center mx-auto" style="max-width: 600px;">
+        <p><strong>Вы уверены, что хотите удалить следующего читателя?</strong></p>
+
+        <dl class="row justify-content-center">
+            <dt class="col-sm-3 text-end">Имя:</dt>
+            <dd class="col-sm-6 text-start">@Model.Name</dd>
+
+            <dt class="col-sm-3 text-end">Фамилия:</dt>
+            <dd class="col-sm-6 text-start">@Model.SecondName</dd>
+        </dl>
+
+        <form asp-action="Delete" method="post" class="d-flex justify-content-center gap-3 mt-4">
+            <input type="hidden" asp-for="Id" />
+            <a asp-action="Index" class="btn btn-secondary">🔙 Отмена</a>
+            <button type="submit" class="btn btn-danger">Удалить</button>
+        </form>
+    </div>
+</div>

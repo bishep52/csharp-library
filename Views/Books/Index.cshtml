@@ -1,0 +1,69 @@
+﻿@model IEnumerable<DB_connect.Models.Book>
+
+@{
+    ViewData["Title"] = "Список книг";
+}
+
+<div class="container py-5">
+    <h2 class="mb-4 text-center">📚 Список книг</h2>
+
+    <div class="d-flex justify-content-end mb-3">
+        <a class="btn btn-success" asp-controller="Books" asp-action="Create">➕ Добавить новую книгу</a>
+    </div>
+
+    @if (Model != null && Model.Any())
+    {
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered align-middle">
+                <thead class="table-dark text-center">
+                    <tr>
+                        <th>Название</th>
+                        <th>Автор</th>
+                        <th>Год</th>
+                        <th>Статус</th>
+                        <th>Действия</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var book in Model)
+                    {
+                        <tr>
+                            <td>@book.Title</td>
+                            <td>@book.Author</td>
+                            <td class="text-center">@book.Year</td>
+                            <td class="text-center">
+                                @if (book.IsAvailable)
+                                {
+                                    <span class="badge bg-success">Доступна</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-danger">Недоступна</span>
+                                }
+                            </td>
+                            <td class="text-center">
+                                <div class="btn-group" role="group">
+                                    <a class="btn btn-sm btn-primary" asp-controller="Books" asp-action="Edit" asp-route-id="@book.Id">✏️ Редактировать</a>
+                                    <a class="btn btn-sm btn-danger" asp-controller="Books" asp-action="Delete" asp-route-id="@book.Id">🗑️ Удалить</a>
+
+                                    @if (book.IsAvailable)
+                                    {
+                                        <form asp-controller="Books" asp-action="Book" asp-route-id="@book.Id" method="post" class="d-inline">
+                                            <button type="submit" class="btn btn-sm btn-warning">📖 Забронировать</button>
+                                        </form>
+                                    }
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info text-center" role="alert">
+            Нет доступных книг 📚
+        </div>
+    }
+</div>

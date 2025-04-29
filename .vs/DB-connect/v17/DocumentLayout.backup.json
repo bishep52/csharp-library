@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\bishe\\Desktop\\CS\\DB-connect\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6A8E8683-D02C-4E89-AF51-BAC526BDEEB3}|DB-connect.csproj|c:\\users\\bishe\\desktop\\cs\\db-connect\\views\\readers\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6A8E8683-D02C-4E89-AF51-BAC526BDEEB3}|DB-connect.csproj|solutionrelative:views\\readers\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A8E8683-D02C-4E89-AF51-BAC526BDEEB3}|DB-connect.csproj|c:\\users\\bishe\\desktop\\cs\\db-connect\\views\\readers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6A8E8683-D02C-4E89-AF51-BAC526BDEEB3}|DB-connect.csproj|solutionrelative:views\\readers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\bishe\\Desktop\\CS\\DB-connect\\Views\\Readers\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Readers\\Details.cshtml",
+              "ToolTip": "C:\\Users\\bishe\\Desktop\\CS\\DB-connect\\Views\\Readers\\Details.cshtml",
+              "RelativeToolTip": "Views\\Readers\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-29T11:34:48.012Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\bishe\\Desktop\\CS\\DB-connect\\Views\\Readers\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Readers\\Index.cshtml",
+              "ToolTip": "C:\\Users\\bishe\\Desktop\\CS\\DB-connect\\Views\\Readers\\Index.cshtml",
+              "RelativeToolTip": "Views\\Readers\\Index.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAA8AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-29T11:31:29.259Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
